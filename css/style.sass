@@ -1,0 +1,812 @@
+@import https://fonts.googleapis.com/css?family=Montserrat
+@import https://fonts.googleapis.com/css?family=Kaushan+Script
+@import https://fonts.googleapis.com/css?family=Roboto
+
+$pink: #f38181
+$green: #95e1d3
+
+.font-mon
+    font-family: Montserrat, Arial, sans-serif
+
+.font-script
+    font-family: 'Kaushan Script', times, serif
+
+.font-roboto
+    font-family: Roboto, Arial, sans-serif
+.font-roboto-i
+    @extend .font-roboto
+    font-style: italic
+    font-weight: 200
+    color: #999
+
+.clearfix:after
+     visibility: hidden
+     display: block
+     font-size: 0
+     content: " "
+     clear: both
+     height: 0
+
+.clearfix
+    display: inline-block
+
+
+body
+    margin: 0
+    padding: 0
+    @extend .font-mon
+    font-size: 14px
+
+h1, h2, h3, p, ul, hr
+    padding: 0
+    margin: 0
+
+h1, h2
+    @extend .font-mon
+    font-weight: 600
+    text-transform: uppercase
+
+h2
+    font-size: 30px
+    padding: 20px 0 40px 0
+
+h3
+    @extend .font-script
+    font-size: 24px
+
+h4
+    @extend .font-mon
+    font-size: 14px
+    text-transform: uppercase
+    color: #333
+a
+    text-decoration: none
+
+hr
+    width: 60px
+    height: 3px
+    background: $pink
+    border: 0
+    margin: 0 auto
+
+hr.fullwidth
+    background: #e5e5e5
+    width: 100%
+    height: 1px
+
+p
+    font-family: 'Roboto', Arial, sans-serif
+    font-size: 15px
+    line-height: 24px
+    color: #999
+
+.container
+    max-width: 1200px
+    margin: 0 auto
+
+#header
+    background: url('../imgs/header-bg.jpg')
+    background-size: cover
+    background-position: center
+    padding-top: 28px
+    color: #fff
+    a
+        color: #fff
+    #logo
+        display: inline-block
+    #navigation
+        float: right
+        ul
+            float: right
+            list-style: none
+            box-sizing: border-box
+            .close
+                display: none
+            .open
+                display: none
+            li
+                display: inline-block
+                padding: 0 24px
+
+                &.active
+                    a
+                        color: #fce38a
+                        border-bottom: 3px solid #fce38a
+                a
+                    padding: 10px 0
+                    text-transform: uppercase
+    .header-slider
+        padding: 113px 0
+        text-align: center
+        h3
+            font-size: 72px
+        h1
+            @extend .font-mon
+            font-size: 150px
+            font-weight: 600
+            line-height: 140px
+            padding: 56px 0 70px 0
+        hr
+            background: #fff
+        .button
+                display: inline-block
+                margin-top: 50px
+                color: #fff
+                text-transform: uppercase
+                border: 3px solid #fff
+                padding: 12px 29px
+    .slider-control
+        ul
+            list-style: none
+            li
+                display: inline-block
+                width: 24%
+                position: relative
+                &.active, &:active
+                    a:after
+                        content: ''
+                        position: absolute
+                        top: -3px
+                        left: 0
+                        width: 70px
+                        height: 3px
+                        color: #fce38a
+                        border-bottom: 3px solid $pink
+                a
+                    opacity: .7
+                    font-size: 18px
+                    text-transform: uppercase
+                    border-top: 3px solid #fff
+                    padding: 25px 0
+                    width: 90%
+                    display: inline-block
+                    .number
+                        font-size: 24px
+                        font-weight: 600
+                        display: inline-block
+                        padding-right: 10px
+#about-us, #service2, #ourteam, #whatwedo, #whatpeoplesay, #blog, #social
+    padding: 90px 0 110px 0
+    text-align: center
+    p
+        padding: 48px 125px 85px 125px
+    ul
+        list-style: none
+        li
+            display: inline-block
+            a
+                display: block
+                img
+                    display: block
+    /* hovering images - the gradient*/
+    .image-container
+        position: relative
+        margin-bottom: 20px
+        img
+            z-index: -1
+            position: relative
+            vertical-align: middle
+        &:hover
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f38181+1,fce38a+100&0.9+0,0.9+100 */
+            background: -moz-linear-gradient(top,  rgba(243,129,129,0.9) 0%, rgba(243,129,129,0.9) 1%, rgba(252,227,138,0.9) 100%)
+            background: -webkit-linear-gradient(top,  rgba(243,129,129,0.9) 0%,rgba(243,129,129,0.9) 1%,rgba(252,227,138,0.9) 100%)
+            background: linear-gradient(to bottom,  rgba(243,129,129,0.9) 0%,rgba(243,129,129,0.9) 1%,rgba(252,227,138,0.9) 100%)
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f38181', endColorstr='#e6fce38a',GradientType=0 )
+            .inner
+                display: block
+    .inner
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        font-size: 28px
+        display: none
+        color: #fff
+        text-transform: uppercase
+        font-size: 18px
+        i, a
+            color: #fff
+            display: inline-block
+            padding: 4px
+
+    .bg
+        font-size: 24px
+        background-color: #fce38a
+        i, a
+            padding: 5px
+            color: $pink
+            &:hover
+                background: $pink
+                color: #fff
+#about-us
+    ul
+        li
+            .image-container
+                margin-bottom: 0
+            .social
+                background: initial
+                @extend .font-mon
+                font-weight: 600
+                font-size: 18px
+                text-transform: uppercase
+                color: #fff
+                i
+                    color: #fff
+                    &:hover
+                        background: initial
+#facts
+    background-color: $green
+    color: #fff
+    ul
+        list-style: none
+        li
+            display: inline-block
+            width: 19.5%
+            padding-top: 90px
+            padding-bottom: 90px
+            border-right: 2px solid #b5eae0
+            text-align: center
+            text-transform: uppercase
+            box-sizing: border-box
+            &:first-child
+                border-left: 2px solid #b5eae0
+            .number
+                display: block
+                @extend .font-mon
+                font-weight: 600
+                font-size: 72px
+                padding-bottom: 10px
+#services
+    padding: 110px 0
+    text-align: center
+    ul
+        list-style: none
+        li
+            display: inline-block
+            width: 33%
+            text-align: left
+            padding-right: 24px
+            box-sizing: border-box
+            @extend .font-roboto
+            font-size: 15px
+            line-height: 24px
+            color: #999
+            img
+                float: left
+                padding: 5px 30px 30px 0
+            h4
+                margin: 0 0 10px 0
+    .first, .second
+        float: left
+    .first
+        padding: 60px 0 50px 0
+        border-bottom: 1px solid #e5e5e5
+    .second
+        padding: 50px 0 100px 0
+#feature
+    background: url('../imgs/feature-bg.jpg')
+    background-size: cover
+    background-position: center
+    padding-top: 110px
+    text-align: center
+    clear: both
+    .images
+        padding-top: 40px
+        position: relative
+        .tablet
+            vertical-align: bottom
+        .phone
+            position: absolute
+            right: 32%
+            bottom: -97px
+#service2
+    .col
+        overflow: hidden
+        width: 50%
+        float: left
+        &::after
+            clear:both
+#accordion1
+    .ui-icon
+        background-image: url(../imgs/arrows.png)
+        background-position: 0 0
+        width: 22px
+        height: 12px
+        float: right
+        margin-top: 7px
+    .ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-button:hover .ui-icon, .ui-button:focus .ui-icon
+    .ui-icon-triangle-1-e
+        background-position: -22px 0
+    .ui-accordion-content
+        width: 100%
+        height: 180px
+    div
+        &:focus
+            outline: 0
+    .box
+        padding: 13px
+        border: 1px solid #e5e5e5
+        text-align: left
+        float: left
+        width: 100%
+        box-sizing: border-box
+        margin-top: 9px
+        &:first-child
+            margin-top: 0
+        img
+            float: left
+        h4
+            float: left
+            margin: 7px 0 0 10px
+            color: #333
+        &::after
+            clear: both
+    p
+        padding: 0
+        @extend .font-roboto-i
+        font-size: 15px
+        line-height: 24px
+        text-align: left
+        overflow: auto
+        overflow-x: hidden
+        max-height: 144px
+    .content
+        float: left
+        overflow-x: hidden
+        padding: 20px
+        border: 1px solid #e5e5e5
+        border-top: 0
+#quote, #testimonals
+    padding: 70px 0
+    background-color: #f8f8f8
+    clear: both
+    .slider, #testimonals-slider
+        width: 90%
+        margin: 0 auto
+        .owl-item
+            img
+                width: initial
+        .owl-nav
+            margin: 0
+            .owl-prev
+                position: absolute
+                left: -40px
+                top: 40%
+            .owl-next
+                position: absolute
+                right: -30px
+                top: 40%
+            .left-arrow, .right-arrow
+                background-image: url('../imgs/arrows2.png')
+                background-position: 0 0
+                width: 12px
+                height: 22px
+            .right-arrow
+                background-position: 12px 0
+        blockquote
+            padding: 0
+            @extend .font-roboto-i
+            font-size: 24px
+            line-height: 36px
+            margin: 0 0 14px 0
+            &.padding
+                padding-top: 30px
+        img
+            float: left
+            padding-right: 30px
+
+        hr
+            margin: 0
+            float: left
+            margin: 15px 15px 0 0
+        .author
+            float:left
+            @extend .font-script
+            font-size: 24px
+            color: #333
+#ourteam
+    .name
+        color: #333
+        @extend .font-mon
+        font-size: 14px
+    .role
+        @extend .font-roboto-i
+        font-size: 14px
+        line-height: 24px
+    ul
+        li
+            p
+                padding: 2px
+#logos
+    padding: 70px 0
+    background: #f8f8f8
+    text-align: center
+    .container
+        opacity: .8
+        width: 100%
+    ul
+        list-style: none
+        display: flex
+        li
+            padding: 0
+            flex-grow: 1
+            align-self: center
+#whatwedo
+    padding-bottom: 0
+    #grid
+        width: 100%
+        height: 780px
+        position: relative
+        box-sizing: border-box
+        font-size: 0
+        overflow: hidden
+    .grid-item
+        height: 50%
+        width: 50%
+        position: relative
+        box-sizing: border-box
+        margin: 0
+    .left, .right
+        float: left
+        width: 50%
+    .left
+        .grid-item
+            display: inline-block
+    .right
+        .grid-item
+            float: left
+    .inner
+        font-size: 14px
+        i
+            font-size: 32px
+        p
+            @extend .font-mon
+            font-size: 14px
+            color: #fff
+            text-transform: uppercase
+            font-weight: 600
+            padding: 10px 0
+    .desc
+        @extend .font-roboto-i
+        color: #fff
+        font-size: 14px
+        text-transform: none
+#testimonals
+    #testimonals-slider
+        blockquote
+            padding-top: 40px
+#whatpeoplesay
+    background-image: url('../imgs/whatpeoplesay.jpg')
+    background-size: cover
+    background-position: center
+    ul
+        padding-top: 80px
+        li
+            width: 48.8%
+            text-align: left
+            padding-bottom: 60px
+            hr
+                margin: 18px 0 20px 0
+            p
+                padding: 0
+                font-size: 14px
+                line-height: 24px
+            img
+                float: left
+                z-index: 1
+            .content
+                margin-left: 136px
+                padding-right: 60px
+            .role
+                @extend .font-roboto-i
+                font-size: 15px
+                line-height: 24px
+                color: #333
+            h4
+                margin: 10px 0
+#blog
+    ul
+        padding-top: 50px
+        text-align: left
+        li
+            width: 31%
+            padding-right: 25px
+        p
+            padding: 0 0 19px 0
+    .header
+        position: relative
+    .date
+        position: absolute
+        bottom: 10px
+        left: -10px
+        background-color: #95e1d3
+        padding: 15px
+        color: #fff
+        font-size: 15px
+        font-style: italic
+        font-weight: 300
+        @extend .font-roboto
+    .number
+        @extend .font-mon
+        display: block
+        font-size: 30px
+        font-style: normal
+        font-weight: 600
+
+    .bottom
+        padding-top: 20px
+    .views, .comments
+        padding-right: 15px
+        font-size: 15px
+        font-style: italic
+        font-weight: 300
+        @extend .font-roboto
+        color: #999
+    .fa
+        color: $green
+#map
+    background: url('../imgs/map.jpg')
+    background-size: cover
+    background-position: center
+    padding: 40px 0
+    color: $pink
+    text-align: center
+    h2, .fa
+        color: $pink
+    .fa
+        font-size: 36px
+    h2
+        padding: 20px
+#footer
+    padding: 74px 0 23px 0
+    background: #f8f8f8
+    box-sizing: border-box
+    p
+        font-style: italic
+    h2
+        color: #999
+        text-transform: none
+    h4
+        margin-bottom: 40px
+    hr
+        margin: 18px 0
+    .content
+        padding-right: 46px
+    .instagram
+        width: 23%
+        float: left
+        .more
+            @extend .font-roboto-i
+            margin-top: 20px
+            display: block
+    .col, .blogs
+        float: left
+        width: 37%
+        padding: 0 45px 65px 0
+        box-sizing: border-box
+        ul
+            list-style: none
+            li
+                padding-bottom: 30px
+                img
+                    float: left
+                    padding-right: 20px
+                h4
+                    padding: 20px 0 5px 0
+                    margin: 0
+    .followers
+        padding-top: 30px
+    .bottom
+        clear: both
+        text-align: center
+        p
+            @extend .font-mon
+            font-size: 14px
+            color: #333
+            font-style: normal
+        a
+            color: $pink
+    .number
+        font-size: 18px
+        font-weight: 600
+    .fa
+        color: $green
+        font-size: 16px
+        padding: 0 10px
+    .subscribe
+        padding-top: 40px
+        width: 378px
+        font-size: 0
+    input[type="text"]
+        padding: 12px
+        border: 1px solid #e7e7e7
+        font-style: italic
+    input[type="submit"]
+        padding: 12px 34px
+        background: $green
+        border: 0
+        color: #fff
+        @extend .font-mon
+        font-weight: 600
+        text-transform: uppercase
+    .desc
+        @extend .font-roboto-i
+
+@media (max-width: 1200px)
+    .container
+        width: 100%
+        padding: 20px 10px
+        box-sizing: border-box
+    #header
+        padding: 0 10px
+    #facts
+        .container
+            padding: 0
+        ul
+            li
+                padding: 50px 0
+                font-size: 14px
+                .number
+                    font-size: 42px
+@media (max-width: 1000px)
+    #services
+        ul
+            li
+                img
+                    padding: 5px 30px 4px 0
+    #blog
+        ul
+            margin: 0 auto
+            width: 50%
+            li
+                width: 100%
+                padding-bottom: 40px
+                .header
+                    img
+                        width: 100%
+    #footer
+        box-sizing: border-box
+        .col, .instagram, .blogs
+            width: 100%
+            padding: 30px
+            box-sizing: border-box
+        .subscribe
+            width: 90%
+    #whatwedo
+        overflow-x: hidden
+        #grid
+            overflow: visible
+        .left, .right
+            width: 100%
+            float: none
+    #logos
+        ul
+            display: block
+            li
+                float: left
+                width: 33%
+@media (max-width: 800px)
+    #about-us p, #service2 p, #ourteam p, #whatwedo p, #whatpeoplesay p, #blog p, #social p
+        padding: 40px 10px
+    #service2
+        .col
+            p
+                padding: 0
+    #about-us, #ourteam
+        .image-container
+            width: 100%
+            img
+                width: 100%
+    #services
+        .first, .second
+            padding: 20px
+        ul
+            li
+                width: 100%
+                padding-bottom: 30px
+                padding-right: 0
+
+    #header
+        overflow: hidden
+        .header-slider
+            padding: 50px 0
+            h1
+                font-size: 100px
+                line-height: initial
+            h3
+                font-size: 56px
+                line-height: initial
+        .show
+            display: block
+        .slider-control
+            ul
+                li
+                    float: left
+                    width: 50%
+        #navigation
+            ul
+                .open
+                    display: inline-block
+            ul#mainnav
+                display: none
+                float: none
+                position: absolute
+                left: 0
+                top: 0
+                width: 100%
+                background: green
+                padding: 10px
+                z-index: 999
+                background: $pink
+                .close
+                    display: block
+                    position: absolute
+                    top: 0
+                    right: 39px
+                    font-size: 24px
+                li
+                    display: block
+                    padding: 15px
+                    .open
+                        display: block
+                    &.active
+                        a
+                            border-bottom: 0
+                            border-left: 3px solid #fce38a
+                            padding-left: 20px
+    #service2
+        .col
+            width: 100%
+            .big
+                width: 100%
+    #quote, #testimonals
+        .slider, #testimonals-slider
+            width: 80%
+            .item
+                img
+                    width: 40%
+@media (max-width: 650px)
+    #whatpeoplesay
+        .content
+            padding-right: 0
+        ul
+            padding: 50px 20px
+            li
+                width: 100%
+    #facts
+        ul
+            text-align: center
+            li
+                width: 25%
+                border: 0
+                &:first-child
+                    border: 0
+@media (max-width: 550px)
+    #header
+        .header-slider
+            h1
+                font-size: 50px
+        .slider-control
+            ul
+                li
+                    float: left
+                    width: 100%
+                    a
+                        padding: 10px 0
+                        width: 100%
+    #logos
+        ul
+            display: block
+            li
+                width: 33%
+                img
+                    width: 70%
+    #blog
+        ul
+            width: 90%
+    #feature
+        .images
+            .tablet
+                width: 100%
+            .phone
+                width: 50%
